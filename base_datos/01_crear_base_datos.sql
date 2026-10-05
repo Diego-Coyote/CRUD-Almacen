@@ -1,0 +1,27 @@
+CREATE DATABASE AlmacenDB;
+GO
+
+USE AlmacenDB;
+GO
+
+CREATE TABLE Usuarios (
+    IdUsuario INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(120) NOT NULL, 
+    Correo VARCHAR(150) NOT NULL UNIQUE,
+    ContrasenaHash VARCHAR(255) NOT NULL,
+    Activo BIT NOT NULL DEFAULT 1,
+    FechaCreacion DATETIME2(0) NOT NULL DEFAULT SYSDATETIME()
+);
+GO
+
+CREATE TABLE Productos (
+    IdProducto INT IDENTITY(1,1) PRIMARY KEY,
+    Codigo VARCHAR(30) NOT NULL UNIQUE,
+    Nombre VARCHAR(120) NOT NULL,
+    Descripcion VARCHAR(250) NULL,
+    Cantidad INT NOT NULL CHECK (Cantidad >= 0),
+    Precio DECIMAL(10,2) NOT NULL CHECK (Precio >= 0),
+    FechaCreacion DATETIME2(0) NOT NULL DEFAULT SYSDATETIME(),
+    FechaActualizacion DATETIME2(0) NULL
+);
+GO
