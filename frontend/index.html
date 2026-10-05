@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingreso | Sistema de Almacén</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="pagina-login">
+  <main class="tarjeta-login">
+    <div class="marca-login">
+      <div class="logo-simple">A</div>
+      <div>
+        <h1>Sistema de Almacén</h1>
+        <p>Control básico de inventario</p>
+      </div>
+    </div>
+
+    <form id="formularioLogin" class="formulario">
+      <div class="grupo-campo">
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" autocomplete="username" required>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="contrasena">Contraseña</label>
+        <input id="contrasena" name="contrasena" type="password" autocomplete="current-password" required>
+      </div>
+
+      <p id="mensajeLogin" class="mensaje" aria-live="polite"></p>
+      <button type="submit" class="boton boton-principal">Ingresar</button>
+      <p class="texto-acceso">¿No tienes una cuenta? <a href="/registro">Registrarse</a></p>
+    </form>
+  </main>
+
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>

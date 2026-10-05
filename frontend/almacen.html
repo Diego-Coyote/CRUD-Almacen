@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almacén | Sistema de Almacén</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <div id="contenedorMenu"></div>
+
+  <main class="contenido-principal">
+    <div class="encabezado-pagina">
+      <div>
+        <h1>Productos del almacén</h1>
+        <p>Administra las existencias registradas.</p>
+      </div>
+      <button id="botonNuevo" class="boton boton-principal">Nuevo producto</button>
+    </div>
+
+    <section class="tarjeta">
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTablaProductos"></tbody>
+        </table>
+      </div>
+      <p id="mensajeTabla" class="mensaje mensaje-centro"></p>
+    </section>
+  </main>
+
+  <div id="modalProducto" class="modal oculto" role="dialog" aria-modal="true">
+    <div class="modal-contenido">
+      <div class="modal-encabezado">
+        <h2 id="tituloModal">Nuevo producto</h2>
+        <button id="botonCerrarModal" class="boton-icono" aria-label="Cerrar">×</button>
+      </div>
+
+      <form id="formularioProducto" class="formulario">
+        <input type="hidden" id="idProducto">
+
+        <div class="fila-campos">
+          <div class="grupo-campo">
+            <label for="codigo">Código</label>
+            <input id="codigo" maxlength="30" required>
+          </div>
+          <div class="grupo-campo">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" maxlength="120" required>
+          </div>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" maxlength="250" rows="3"></textarea>
+        </div>
+
+        <div class="fila-campos">
+          <div class="grupo-campo">
+            <label for="cantidad">Cantidad</label>
+            <input id="cantidad" type="number" min="0" step="1" required>
+          </div>
+          <div class="grupo-campo">
+            <label for="precio">Precio</label>
+            <input id="precio" type="number" min="0" step="0.01" required>
+          </div>
+        </div>
+
+        <p id="mensajeFormulario" class="mensaje"></p>
+        <div class="acciones-formulario">
+          <button type="button" id="botonCancelar" class="boton boton-secundario">Cancelar</button>
+          <button type="submit" class="boton boton-principal">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/js/almacen.js"></script>
+</body>
+</html>

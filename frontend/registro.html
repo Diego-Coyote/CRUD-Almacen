@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Sistema de Almacén</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="pagina-login">
+  <main class="tarjeta-login">
+    <div class="marca-login">
+      <div class="logo-simple">A</div>
+      <div>
+        <h1>Crear cuenta</h1>
+        <p>Sistema de Almacén</p>
+      </div>
+    </div>
+
+    <form id="formularioRegistro" class="formulario">
+      <div class="grupo-campo">
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="contrasena">Contraseña</label>
+        <input id="contrasena" name="contrasena" type="password" autocomplete="new-password" minlength="6" required>
+      </div>
+
+      <p id="mensajeRegistro" class="mensaje" aria-live="polite"></p>
+      <button type="submit" class="boton boton-principal">Registrarse</button>
+      <p class="texto-acceso">¿Ya tienes una cuenta? <a href="/">Iniciar sesión</a></p>
+    </form>
+  </main>
+
+  <script type="module" src="/js/registro.js"></script>
+</body>
+</html>
