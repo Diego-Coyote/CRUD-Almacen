@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Builds
+dist/
+build/
+
+# Editor
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Base de datos
+*.bak
+*.mdf
+*.ldf
+
+# Llaves y certificados
+*.pem
+*.key
+*.pfx
+*.p12

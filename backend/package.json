@@ -1,0 +1,29 @@
+{
+  "name": "api-almacen",
+  "version": "1.0.0",
+  "description": "API REST para gestión de almacén con autenticación JWT y SQL Server",
+  "main": "src/servidor.js",
+  "scripts": {
+    "iniciar": "node src/servidor.js",
+    "desarrollo": "nodemon src/servidor.js",
+    "crear-admin": "node src/utilidades/crearAdministrador.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mssql": "^11.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
